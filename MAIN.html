@@ -3,151 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
 <title>E-Commerce KPI Report — July 28, 2026</title>
 <script src="https://cdn.tailwindcss.com"></script>
-=======
-<title>Weekend KPI Dashboard — Jul 24–26, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
->>>>>>> 26bf3b402387f44222221eca361382cec45f4a20
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --bg: #0a0a0f; --surface: #111118; --surface2: #18181f; --surface3: #1e1e28;
-    --border: #2a2a38; --text: #e8e8f0; --muted: #7070a0; --dim: #4a4a6a;
-    --cyan: #00d4ff; --purple: #a855f7; --green: #00ff88; --green-dim: rgba(0,255,136,0.12);
-    --red: #ff3366; --red-dim: rgba(255,51,102,0.1); --gold: #fbbf24; --orange: #f97316;
-    --radius: 12px; --radius-sm: 8px;
-  }
-  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.5; padding: 24px; }
-
-  .header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
-  .header h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
-  .header p { color: var(--muted); font-size: 13px; margin-top: 4px; }
-  .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-  .badge { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 14px; font-size: 11px; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; }
-  .q3-badge { background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.35); border-radius: 6px; padding: 6px 14px; font-size: 11px; color: var(--orange); letter-spacing: 0.5px; text-transform: uppercase; font-weight: 700; }
-
-  .drops { background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(0,212,255,0.05)); border: 1px solid rgba(168,85,247,0.3); border-radius: var(--radius); padding: 14px 20px; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 16px; }
-  .drops-lbl { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--purple); white-space: nowrap; padding-top: 2px; }
-  .drops-list { display: flex; flex-direction: column; gap: 6px; flex: 1; }
-  .drop-item { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; }
-  .drop-brand { font-weight: 700; color: var(--cyan); min-width: 60px; font-size: 11px; }
-  .drop-text { color: var(--text); opacity: 0.85; }
-
-  .sec { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-  .sec::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  .hero { display: grid; grid-template-columns: repeat(3, 1fr) 1.4fr; gap: 12px; margin-bottom: 20px; }
-  .day-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; position: relative; overflow: hidden; }
-  .day-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
-  .c-fri::before  { background: linear-gradient(90deg, var(--purple), transparent); }
-  .c-sat::before  { background: linear-gradient(90deg, var(--cyan), transparent); }
-  .c-sun::before  { background: linear-gradient(90deg, var(--gold), transparent); }
-  .c-tot::before  { background: linear-gradient(90deg, var(--green), transparent); }
-  .dlbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 4px; }
-  .c-tot .dlbl { color: var(--green); }
-  .ddt { font-size: 11px; color: var(--dim); margin-bottom: 10px; }
-  .damt { font-size: 28px; font-weight: 900; letter-spacing: -1px; line-height: 1; }
-  .c-tot .damt { font-size: 32px; color: var(--green); }
-  .dvar { font-size: 12px; font-weight: 600; margin-top: 6px; }
-  .dnote { font-size: 10px; color: var(--muted); margin-top: 6px; opacity: 0.8; }
-  .pos { color: var(--green); } .neg { color: var(--red); }
-
-  .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
-  .ph { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
-  .pt { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gold); }
-  .pt-q3 { color: var(--orange); }
-  .pr { font-size: 10px; color: var(--dim); }
-  .pa { font-size: 30px; font-weight: 900; letter-spacing: -1px; }
-  .pg { font-size: 12px; color: var(--muted); margin-top: 4px; }
-  .pg span { color: var(--gold); font-weight: 700; }
-  .pg span.org { color: var(--orange); }
-  .pbar { background: var(--surface3); border-radius: 4px; height: 6px; margin: 12px 0 8px; overflow: hidden; }
-  .pfill { height: 100%; border-radius: 4px; }
-  .fill-g { background: linear-gradient(90deg, var(--gold), #f59e0b); }
-  .fill-o { background: linear-gradient(90deg, var(--orange), #ea580c); }
-  .pdim { font-size: 11px; color: var(--dim); margin-bottom: 8px; }
-  .pv { font-size: 12px; font-weight: 600; }
-  .pp { font-size: 11px; color: var(--muted); margin-top: 6px; }
-  .pp span { color: var(--text); font-weight: 600; }
-
-  .primaries { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
-  .bc { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-  .bch { padding: 14px 16px 10px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-  .bn { font-size: 13px; font-weight: 800; }
-  .bbadge { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 2px 7px; border-radius: 20px; }
-  .bp  { background: var(--green-dim); color: var(--green); }
-  .bn2 { background: var(--red-dim); color: var(--red); }
-  .bcb { padding: 14px 16px; }
-  .dr { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid rgba(42,42,56,0.5); }
-  .dr:last-child { border-bottom: none; }
-  .drd { font-size: 11px; color: var(--muted); font-weight: 600; width: 28px; }
-  .drs { font-size: 12px; font-weight: 700; }
-  .drv { font-size: 11px; font-weight: 600; }
-  .bwt { border-top: 1px solid var(--border); margin-top: 8px; padding-top: 8px; display: flex; justify-content: space-between; align-items: center; }
-  .bwl { font-size: 11px; color: var(--muted); font-weight: 600; }
-  .bcm { background: var(--surface2); border-top: 1px solid var(--border); padding: 12px 16px; }
-  .mr { display: flex; justify-content: space-between; align-items: center; }
-  .ml { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gold); }
-  .mv { font-size: 14px; font-weight: 800; color: var(--gold); }
-  .mt { font-size: 10px; color: var(--dim); margin-top: 3px; }
-  .bpbar { background: var(--surface3); border-radius: 3px; height: 4px; margin-top: 8px; overflow: hidden; }
-  .bpfill { height: 100%; border-radius: 3px; }
-  .bpct { font-size: 10px; color: var(--dim); margin-top: 4px; }
-  .note { font-size: 10px; color: var(--muted); margin-top: 6px; opacity: 0.8; }
-
-  .app-wrap { background: var(--surface); border: 1px solid rgba(168,85,247,0.25); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
-  .app-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-  .app-title { font-size: 13px; font-weight: 800; color: var(--purple); }
-  .app-stats { display: flex; gap: 20px; }
-  .app-stat { font-size: 11px; color: var(--muted); }
-  .app-stat span { color: var(--text); font-weight: 700; }
-  .app-days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
-  .adc { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; }
-  .adl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 8px; }
-  .ads { font-size: 18px; font-weight: 900; color: var(--purple); letter-spacing: -0.5px; }
-  .adm { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-top: 8px; }
-  .admi { font-size: 10px; color: var(--muted); }
-  .admi span { color: var(--text); font-weight: 600; }
-  .app-wt { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; padding: 10px 14px; background: var(--surface2); border-radius: var(--radius-sm); flex-wrap: wrap; }
-  .awt-lbl { font-size: 10px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
-  .awt-amt { font-size: 18px; font-weight: 900; color: var(--purple); }
-  .awt-meta { font-size: 11px; color: var(--muted); }
-  .app-pct-pill { margin-left: auto; background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3); border-radius: 6px; padding: 4px 10px; text-align: center; }
-  .app-pct-pill .pl { font-size: 9px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
-  .app-pct-pill .pv2 { font-size: 16px; font-weight: 900; color: var(--purple); }
-  .app-pct-pill .pd { font-size: 9px; color: var(--dim); }
-  .app-mtd { background: var(--surface2); border: 1px solid rgba(168,85,247,0.2); border-radius: var(--radius-sm); padding: 12px 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-  .amts { text-align: center; }
-  .amts .al { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
-  .amts .av { font-size: 18px; font-weight: 900; color: var(--purple); margin-top: 2px; letter-spacing: -0.5px; }
-  .amts .ad { font-size: 9px; color: var(--dim); margin-top: 2px; }
-
-  .addl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
-  .mb { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid; border-radius: var(--radius-sm); padding: 12px 14px; }
-  .mb-n  { font-size: 11px; font-weight: 800; margin-bottom: 8px; }
-  .mb-lbl { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
-  .mb-w  { font-size: 16px; font-weight: 900; letter-spacing: -0.5px; }
-  .mb-d  { font-size: 10px; color: var(--muted); margin-top: 3px; }
-  .mb-m  { font-size: 11px; font-weight: 700; color: var(--gold); margin-top: 6px; }
-  .mb-mv { font-size: 10px; }
-  .mb-t  { font-size: 10px; color: var(--dim); }
-  .bl-jason  { border-left-color: #10b981; }
-  .bl-crail  { border-left-color: #f59e0b; }
-  .bl-vpm    { border-left-color: #6366f1; }
-  .bl-forum  { border-left-color: #ec4899; }
-  .bl-fulton { border-left-color: #14b8a6; }
-  .bl-jack   { border-left-color: #8b5cf6; }
-  .bl-t5     { border-left-color: #64748b; }
-
-  .footer { text-align: center; color: var(--dim); font-size: 10px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #020617;
+    color: #f8fafc;
+}
+.shadow-neon-cyan {
+    box-shadow: 0 0 15px -3px rgba(6,182,212,0.4), inset 0 0 8px -2px rgba(6,182,212,0.1);
+}
+.shadow-neon-purple {
+    box-shadow: 0 0 15px -3px rgba(168,85,247,0.3), inset 0 0 8px -2px rgba(168,85,247,0.1);
+}
+.shadow-neon-green {
+    box-shadow: 0 0 15px -3px rgba(74,222,128,0.3), inset 0 0 8px -2px rgba(74,222,128,0.1);
+}
+.shadow-neon-gold {
+    box-shadow: 0 0 18px -3px rgba(234,179,8,0.35), inset 0 0 8px -2px rgba(234,179,8,0.1);
+}
+.text-neon-cyan {
+    color: #22d3ee;
+    text-shadow: 0 0 10px rgba(34,211,238,0.5);
+}
+.text-neon-green {
+    color: #4ade80;
+    text-shadow: 0 0 8px rgba(74,222,128,0.6);
+}
+.text-neon-red {
+    color: #f87171;
+    text-shadow: 0 0 8px rgba(248,113,113,0.6);
+}
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
 </style>
 </head>
-<body>
+<body class="p-4 md:p-8 flex flex-col gap-6">
 
-<<<<<<< HEAD
 <!-- SECTION 1: HEADER -->
 <div class="animate-fade-in text-center">
   <div class="text-neon-cyan font-extrabold tracking-[0.22em] uppercase text-3xl md:text-4xl">E-Commerce KPI Report</div>
@@ -796,398 +697,20 @@
 <div class="animate-fade-in">
   <div class="text-center text-[9px] text-slate-700 tracking-widest uppercase py-2">
     Report Generated: July 28, 2026 &nbsp;·&nbsp; Actuals: July 27, 2026 &nbsp;·&nbsp; Supra Distribution Internal Use Only &nbsp;·&nbsp; Generated via automated KPI dashboard pipeline
-=======
-<!-- HEADER -->
-<div class="header">
-  <div>
-    <h1>Weekend KPI Report</h1>
-    <p>Jul 24 (Fri) &mdash; Jul 26 (Sun), 2026 &nbsp;&middot;&nbsp; Reported Mon Jul 27, 2026</p>
-  </div>
-  <div class="header-right">
-    <div class="badge">12 Stores &nbsp;&middot;&nbsp; All Brands</div>
-    <div class="q3-badge">&#9889; Q3 2026 &nbsp;&middot;&nbsp; Week 4 &nbsp;&middot;&nbsp; Final July Weekend</div>
   </div>
 </div>
 
-<!-- DROPS -->
-<div class="drops">
-  <div class="drops-lbl">&#128230; Today's<br>Drops Jul 27</div>
-  <div class="drops-list">
-    <div class="drop-item">
-      <div class="drop-brand">DIXXON</div>
-      <div class="drop-text">5pm (4pm early in app) &mdash; Nordic LS Bamboo [120] / Punch List FR Flannel [179] / The Visitor Party Shirt [100] / Delmo Speed Work Shirt [51]</div>
-    </div>
-    <div class="drop-item">
-      <div class="drop-brand">CASIO</div>
-      <div class="drop-text">No newness today</div>
-    </div>
->>>>>>> 26bf3b402387f44222221eca361382cec45f4a20
-  </div>
-</div>
-
-<!-- WEEKEND HERO -->
-<div class="sec">Weekend Sales Performance</div>
-<div class="hero">
-  <div class="day-card c-fri">
-    <div class="dlbl">Friday</div>
-    <div class="ddt">Jul 24, 2026</div>
-    <div class="damt pos">$43,268</div>
-    <div class="dvar pos">+$6,569 vs target (+15%)</div>
-    <div class="dnote">Curl SS Bamboo [120] / Waimea Party Shirt [135] &mdash; Dixxon 10am</div>
-  </div>
-  <div class="day-card c-sat">
-    <div class="dlbl">Saturday</div>
-    <div class="ddt">Jul 25, 2026</div>
-    <div class="damt pos">$33,621</div>
-    <div class="dvar pos">+$3,422 vs target (+10%)</div>
-  </div>
-  <div class="day-card c-sun">
-    <div class="dlbl">Sunday</div>
-    <div class="ddt">Jul 26, 2026</div>
-    <div class="damt neg">$28,871</div>
-    <div class="dvar neg">&minus;$1,328 vs target (&minus;5%)</div>
-  </div>
-  <div class="day-card c-tot">
-    <div class="dlbl">Weekend Total</div>
-    <div class="ddt">All Stores Combined</div>
-    <div class="damt">$105,760</div>
-    <div class="dvar pos">+$8,663 vs target (+9%)</div>
-  </div>
-</div>
-
-<!-- MTD / QTD -->
-<div class="panels">
-  <div class="panel">
-    <div class="ph">
-      <div class="pt">&#128197; July MTD &mdash; All Stores</div>
-      <div class="pr">Jul 1&ndash;26 of 31 days</div>
-    </div>
-    <div class="pa">$1,048,419</div>
-    <div class="pg">Full Month Goal: <span>$1,119,719</span></div>
-    <div class="pbar"><div class="pfill fill-g" style="width:93.6%"></div></div>
-    <div class="pdim">93.6% of monthly goal &mdash; 5 days remaining</div>
-    <div class="pv pos">+$106,695 vs prorated target (+11%)</div>
-    <div class="pp">Prorated target (Jul 1&ndash;26): <span>$941,724</span></div>
-  </div>
-  <div class="panel">
-    <div class="ph">
-      <div class="pt pt-q3">&#9889; Q3 QTD &mdash; All Stores</div>
-      <div class="pr">Jul 1&ndash;26 &nbsp;&middot;&nbsp; Q3 = Jul / Aug / Sep</div>
-    </div>
-    <div class="pa" style="color:var(--orange);">$1,048,419</div>
-    <div class="pg">Full Q3 Goal: <span class="org">$3,326,275</span></div>
-    <div class="pbar"><div class="pfill fill-o" style="width:31.5%"></div></div>
-    <div class="pdim">31.5% of Q3 goal &mdash; 26 of 92 days in</div>
-    <div class="pv pos">+$106,695 vs prorated Q3 target (+11%)</div>
-    <div class="pp">Q3 prorated target (Jul 1&ndash;26): <span>$941,724</span></div>
-  </div>
-</div>
-
-<!-- PRIMARY BRANDS -->
-<div class="sec">Primary Brands</div>
-<div class="primaries">
-
-  <!-- DIXXON -->
-  <div class="bc">
-    <div class="bch" style="border-top:2px solid var(--purple);">
-      <div class="bn" style="color:var(--purple);">DIXXON</div>
-      <div class="bbadge bn2">&minus;1% MTD</div>
-    </div>
-    <div class="bcb">
-      <div class="dr">
-        <div class="drd">FRI</div>
-        <div class="drs">$18,848</div>
-        <div class="drv pos">+$2,348 (+12%)</div>
-      </div>
-      <div class="dr">
-        <div class="drd">SAT</div>
-        <div class="drs">$9,010</div>
-        <div class="drv neg">&minus;$990 (&minus;11%)</div>
-      </div>
-      <div class="dr">
-        <div class="drd">SUN</div>
-        <div class="drs">$11,003</div>
-        <div class="drv pos">+$1,003 (+9%)</div>
-      </div>
-      <div class="bwt">
-        <div class="bwl">WKND TOTAL</div>
-        <div style="font-size:16px;font-weight:900;color:var(--purple);">$38,861</div>
-      </div>
-      <div class="note">10am &mdash; Curl SS Bamboo [120] / Waimea Party Shirt [135]</div>
-    </div>
-    <div class="bcm">
-      <div class="mr"><div class="ml">July MTD</div><div class="mv" style="color:var(--red);">$403,185</div></div>
-      <div class="mt">Prorated target: $406,000</div>
-      <div class="neg" style="font-size:11px;margin-top:3px;">&minus;$2,815 (&minus;1%)</div>
-      <div class="bpbar"><div class="bpfill" style="width:83.5%;background:linear-gradient(90deg,var(--purple),#9333ea);"></div></div>
-      <div class="bpct">83.5% of $483,000 July goal</div>
-    </div>
-  </div>
-
-  <!-- CASIO -->
-  <div class="bc">
-    <div class="bch" style="border-top:2px solid var(--cyan);">
-      <div class="bn" style="color:var(--cyan);">CASIO / G-SHOCK</div>
-      <div class="bbadge bp">+34% MTD</div>
-    </div>
-    <div class="bcb">
-      <div class="dr">
-        <div class="drd">FRI</div>
-        <div class="drs">$17,413</div>
-        <div class="drv pos">+$3,913 (+22%)</div>
-      </div>
-      <div class="dr">
-        <div class="drd">SAT</div>
-        <div class="drs">$15,852</div>
-        <div class="drv pos">+$2,352 (+15%)</div>
-      </div>
-      <div class="dr">
-        <div class="drd">SUN</div>
-        <div class="drs">$13,402</div>
-        <div class="drv neg">&minus;$98 (&minus;1%)</div>
-      </div>
-      <div class="bwt">
-        <div class="bwl">WKND TOTAL</div>
-        <div style="font-size:16px;font-weight:900;color:var(--cyan);">$46,667</div>
-      </div>
-      <div class="note">Fri &amp; Sat above target &mdash; consistent Q3 outperformance</div>
-    </div>
-    <div class="bcm">
-      <div class="mr"><div class="ml">July MTD</div><div class="mv">$471,791</div></div>
-      <div class="mt">Prorated target: $351,000</div>
-      <div style="font-size:11px;margin-top:3px;color:var(--cyan);">+$120,791 (+34%)</div>
-      <div class="bpbar"><div class="bpfill" style="width:100%;background:linear-gradient(90deg,var(--cyan),#0ea5e9);"></div></div>
-      <div class="bpct">112.7% of $418,500 July goal &#10003;</div>
-    </div>
-  </div>
-
-  <!-- BYLT -->
-  <div class="bc">
-    <div class="bch" style="border-top:2px solid var(--purple);">
-      <div class="bn" style="color:var(--purple);">BYLT</div>
-      <div class="bbadge bn2">&minus;36% MTD</div>
-    </div>
-    <div class="bcb">
-      <div class="dr">
-        <div class="drd">FRI</div>
-        <div class="drs">$1,523</div>
-        <div class="drv neg">&minus;$1,727 (&minus;53%)</div>
-      </div>
-      <div class="dr">
-        <div class="drd">SAT</div>
-        <div class="drs">$3,145</div>
-        <div class="drv neg">&minus;$105 (&minus;3%)</div>
-      </div>
-      <div class="dr">
-        <div class="drd">SUN</div>
-        <div class="drs">$1,792</div>
-        <div class="drv neg">&minus;$1,458 (&minus;45%)</div>
-      </div>
-      <div class="bwt">
-        <div class="bwl">WKND TOTAL</div>
-        <div style="font-size:16px;font-weight:900;color:var(--red);">$6,460</div>
-      </div>
-    </div>
-    <div class="bcm">
-      <div class="mr"><div class="ml">July MTD</div><div class="mv" style="color:var(--red);">$54,292</div></div>
-      <div class="mt">Prorated target: $84,950</div>
-      <div class="neg" style="font-size:11px;margin-top:3px;">&minus;$30,658 (&minus;36%)</div>
-      <div class="bpbar"><div class="bpfill" style="width:53.7%;background:linear-gradient(90deg,var(--red),#dc2626);"></div></div>
-      <div class="bpct">53.7% of $101,200 July goal</div>
-    </div>
-  </div>
-
-  <!-- GASTOWN -->
-  <div class="bc">
-    <div class="bch" style="border-top:2px solid var(--purple);">
-      <div class="bn" style="color:var(--purple);">GASTOWN</div>
-      <div class="bbadge bp">+26% MTD</div>
-    </div>
-    <div class="bcb">
-      <div class="dr">
-        <div class="drd">FRI</div>
-        <div class="drs">$4,870</div>
-        <div class="drv pos">+$1,970 (+40%)</div>
-      </div>
-      <div class="dr">
-        <div class="drd">SAT</div>
-        <div class="drs">$5,327</div>
-        <div class="drv pos">+$2,427 (+46%)</div>
-      </div>
-      <div class="dr">
-        <div class="drd">SUN</div>
-        <div class="drs">$2,220</div>
-        <div class="drv neg">&minus;$680 (&minus;23%)</div>
-      </div>
-      <div class="bwt">
-        <div class="bwl">WKND TOTAL</div>
-        <div style="font-size:16px;font-weight:900;color:var(--purple);">$12,417</div>
-      </div>
-      <div class="note">Helmet Discounts (ghost, outlaw, speed) + GWP &mdash; Sat AOV $665.92</div>
-    </div>
-    <div class="bcm">
-      <div class="mr"><div class="ml">July MTD</div><div class="mv">$107,802</div></div>
-      <div class="mt">Prorated target: $85,500</div>
-      <div class="pos" style="font-size:11px;margin-top:3px;">+$22,302 (+26%)</div>
-      <div class="bpbar"><div class="bpfill" style="width:100%;background:linear-gradient(90deg,var(--purple),#9333ea);"></div></div>
-      <div class="bpct">107.8% of $100,000 July goal &#10003;</div>
-    </div>
-  </div>
-
-</div>
-
-<!-- DIXXON APP -->
-<div class="sec">Dixxon App Performance</div>
-<div class="app-wrap">
-  <div class="app-hdr">
-    <div class="app-title">&#128241; DIXXON APP</div>
-    <div class="app-stats">
-      <div class="app-stat">App Users: <span>5,818</span></div>
-      <div class="app-stat">Push Subscribers: <span>3,153</span></div>
-    </div>
-  </div>
-  <div class="app-days">
-    <div class="adc">
-      <div class="adl">Friday &mdash; Jul 24</div>
-      <div class="ads">$6,505.96</div>
-      <div class="adm">
-        <div class="admi">Orders: <span>43</span></div>
-        <div class="admi">Sessions: <span>862</span></div>
-        <div class="admi">Installs: <span>24</span></div>
-        <div class="admi">Signups: <span>14</span></div>
-      </div>
-    </div>
-    <div class="adc">
-      <div class="adl">Saturday &mdash; Jul 25</div>
-      <div class="ads">$2,646.58</div>
-      <div class="adm">
-        <div class="admi">Orders: <span>16</span></div>
-        <div class="admi">Sessions: <span>364</span></div>
-        <div class="admi">Installs: <span>20</span></div>
-        <div class="admi">Signups: <span>8</span></div>
-      </div>
-    </div>
-    <div class="adc">
-      <div class="adl">Sunday &mdash; Jul 26</div>
-      <div class="ads">$2,878.57</div>
-      <div class="adm">
-        <div class="admi">Orders: <span>16</span></div>
-        <div class="admi">Sessions: <span>481</span></div>
-        <div class="admi">Installs: <span>17</span></div>
-        <div class="admi">Signups: <span>9</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="app-wt">
-    <div class="awt-lbl">Weekend App Total</div>
-    <div class="awt-amt">$12,031.11</div>
-    <div class="awt-meta">75 orders &nbsp;&middot;&nbsp; 1,707 sessions &nbsp;&middot;&nbsp; 61 installs &nbsp;&middot;&nbsp; 31 signups</div>
-    <div class="app-pct-pill">
-      <div class="pl">App % of Dixxon Wknd</div>
-      <div class="pv2">31.0%</div>
-      <div class="pd">$12,031 of $38,861</div>
-    </div>
-  </div>
-  <div class="app-mtd">
-    <div class="amts">
-      <div class="al">MTD App Sales</div>
-      <div class="av">$122,361</div>
-    </div>
-    <div class="amts">
-      <div class="al">MTD App Orders</div>
-      <div class="av">784</div>
-    </div>
-    <div class="amts">
-      <div class="al">MTD App Sessions</div>
-      <div class="av">14,800</div>
-    </div>
-    <div class="amts">
-      <div class="al">App % of Dixxon MTD</div>
-      <div class="av">30.3%</div>
-      <div class="ad">$122,361 of $403,185</div>
-    </div>
-  </div>
-</div>
-
-<!-- ADDITIONAL BRANDS -->
-<div class="sec">Additional Brands</div>
-<div class="addl">
-
-  <div class="mb bl-jason">
-    <div class="mb-n">JASON MARKK</div>
-    <div class="mb-lbl">Weekend Sales</div>
-    <div class="mb-w neg">$59</div>
-    <div class="mb-d">Fri $24 &middot; Sat $35 &middot; Sun $0 &nbsp;&#128722; Prime Days</div>
-    <div class="mb-m">MTD: $1,184</div>
-    <div class="mb-mv neg">&minus;$636 (&minus;35%) vs $1,820 target</div>
-    <div class="mb-t">July Goal: $2,170</div>
-  </div>
-
-  <div class="mb bl-crail">
-    <div class="mb-n">CRAILTAP</div>
-    <div class="mb-lbl">Weekend Sales</div>
-    <div class="mb-w pos">$130</div>
-    <div class="mb-d">Fri $130 &middot; Sat $0 &middot; Sun $0</div>
-    <div class="mb-m">MTD: $282</div>
-    <div class="mb-mv neg">&minus;$628 (&minus;69%) vs $910 target</div>
-    <div class="mb-t">July Goal: $1,085</div>
-  </div>
-
-  <div class="mb bl-vpm">
-    <div class="mb-n">VILLAGE PM</div>
-    <div class="mb-lbl">Weekend Sales</div>
-    <div class="mb-w pos">$553</div>
-    <div class="mb-d">Fri $190 &middot; Sat $179 &middot; Sun $184</div>
-    <div class="mb-m">MTD: $3,944</div>
-    <div class="mb-mv pos">+$1,864 (+90%) vs $2,080 target</div>
-    <div class="mb-t">July Goal: $2,480 &nbsp;&#10003; 159% to goal</div>
-  </div>
-
-  <div class="mb bl-forum">
-    <div class="mb-n">FORUM</div>
-    <div class="mb-lbl">Weekend Sales</div>
-    <div class="mb-w neg">$0</div>
-    <div class="mb-d">Fri $0 &middot; Sat $0 &middot; Sun $0</div>
-    <div class="mb-m">MTD: $0</div>
-    <div class="mb-mv neg">&minus;$260 (&minus;100%) vs $260 target</div>
-    <div class="mb-t">July Goal: $310</div>
-  </div>
-
-  <div class="mb bl-fulton">
-    <div class="mb-n">FULTON &amp; ROARK</div>
-    <div class="mb-lbl">Weekend Sales</div>
-    <div class="mb-w pos">$540</div>
-    <div class="mb-d">Fri $270 &middot; Sat $0 &middot; Sun $270</div>
-    <div class="mb-m">MTD: $4,770</div>
-    <div class="mb-mv neg">&minus;$1,938 (&minus;29%) vs $6,708 target</div>
-    <div class="mb-t">July Goal: $7,998</div>
-  </div>
-
-  <div class="mb bl-jack">
-    <div class="mb-n">JACK HENRY</div>
-    <div class="mb-lbl">Weekend Sales</div>
-    <div class="mb-w neg">$73</div>
-    <div class="mb-d">Fri $0 &middot; Sat $73 &middot; Sun $0</div>
-    <div class="mb-m">MTD: $1,170</div>
-    <div class="mb-mv neg">&minus;$1,326 (&minus;53%) vs $2,496 target</div>
-    <div class="mb-t">July Goal: $2,976</div>
-  </div>
-
-  <div class="mb bl-t5">
-    <div class="mb-n">T5MRKT</div>
-    <div class="mb-lbl">Weekend Sales</div>
-    <div class="mb-w neg">$0</div>
-    <div class="mb-d">Fri $0 &middot; Sat $0 &middot; Sun $0</div>
-    <div class="mb-m">MTD: $0</div>
-    <div class="mb-mv neg">&minus;$260 (&minus;100%) vs $260 target</div>
-    <div class="mb-t">July Goal: $310</div>
-  </div>
-
-</div>
-
-<div class="footer">
-  Weekend KPI Dashboard &nbsp;&middot;&nbsp; Jul 24&ndash;26, 2026 &nbsp;&middot;&nbsp; Reported Jul 27, 2026 &nbsp;&middot;&nbsp; Q3 2026 Week 4 &nbsp;&middot;&nbsp; Data: Supermetrics CSV / Dixxon App
-</div>
-
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.animate-fade-in');
+    elements.forEach((el, i) => {
+        setTimeout(() => {
+            void el.offsetWidth;
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, i * 80);
+    });
+});
+</script>
 </body>
 </html>
