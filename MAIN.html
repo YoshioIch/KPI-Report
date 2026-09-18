@@ -3,469 +3,698 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-Commerce KPI Report — Sep 17, 2026</title>
+<title>E-Commerce KPI Report &mdash; September 18, 2026</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  body { font-family: 'Inter', sans-serif; background:#020617; color:#f8fafc; }
-  .shadow-neon-cyan { box-shadow: 0 0 18px 0 rgba(34,211,238,0.35); }
-  .shadow-neon-purple { box-shadow: 0 0 18px 0 rgba(168,85,247,0.35); }
-  .shadow-neon-orange { box-shadow: 0 0 18px 0 rgba(251,146,60,0.35); }
-  .text-neon-cyan { color:#22d3ee; text-shadow: 0 0 8px rgba(34,211,238,0.6); }
-  .text-neon-green { color:#4ade80; text-shadow: 0 0 6px rgba(74,222,128,0.5); }
-  .text-neon-red { color:#f87171; text-shadow: 0 0 6px rgba(248,113,113,0.5); }
-  .text-neon-orange { color:#fb923c; text-shadow: 0 0 6px rgba(251,146,60,0.5); }
-  .text-neon-purple { color:#c084fc; text-shadow: 0 0 6px rgba(192,132,252,0.5); }
-  .animate-fade-in { opacity:0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
-  .animate-fade-in.visible { opacity:1; transform: translateY(0); }
-  ::-webkit-scrollbar { width:8px; height:8px; }
-  ::-webkit-scrollbar-track { background:#0f172a; }
-  ::-webkit-scrollbar-thumb { background:#334155; border-radius:4px; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #020617;
+    color: #f8fafc;
+}
+.shadow-neon-cyan {
+    box-shadow: 0 0 15px -3px rgba(6,182,212,0.4), inset 0 0 8px -2px rgba(6,182,212,0.1);
+}
+.shadow-neon-purple {
+    box-shadow: 0 0 15px -3px rgba(168,85,247,0.3), inset 0 0 8px -2px rgba(168,85,247,0.1);
+}
+.text-neon-cyan {
+    color: #22d3ee;
+    text-shadow: 0 0 10px rgba(34,211,238,0.5);
+}
+.text-neon-green {
+    color: #4ade80;
+    text-shadow: 0 0 8px rgba(74,222,128,0.6);
+}
+.text-neon-red {
+    color: #f87171;
+    text-shadow: 0 0 8px rgba(248,113,113,0.6);
+}
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
 </style>
 </head>
-<body class="min-h-screen px-4 py-8 md:px-10">
-<div class="max-w-7xl mx-auto space-y-8">
+<body class="p-4 md:p-8 flex flex-col gap-6">
 
-  <header class="text-center animate-fade-in">
-    <h1 class="text-3xl md:text-4xl font-extrabold uppercase tracking-[0.22em] text-neon-cyan">E-Commerce KPI Report</h1>
-    <p class="text-slate-400 mt-2 text-sm md:text-base">September 17, 2026 <span class="text-slate-600">(Reporting September 16 Actuals)</span></p>
-    <div class="flex justify-center gap-3 mt-4">
-      <span class="rounded-full border border-slate-600 px-4 py-1 text-xs text-slate-300">12 Stores &middot; All Brands</span>
-      <span class="rounded-full border border-orange-500/50 px-4 py-1 text-xs text-neon-orange">&#9889; Q3 2026 &middot; Week 3</span>
-    </div>
-  </header>
 
-  <div class="rounded-2xl bg-slate-900/70 border border-cyan-500/30 p-5 animate-fade-in">
-    <p class="text-xs uppercase tracking-widest text-slate-500 mb-3">&#9889; Today's Daily Budget Targets (Sep 17)</p>
-    <div class="grid grid-cols-2 md:grid-cols-6 gap-3 mb-4">
-      <div class="bg-slate-800/60 rounded-xl p-3 text-center"><p class="text-[10px] text-neon-cyan uppercase">Total Sales Target</p><p class="text-lg font-bold text-white">$29,516</p></div>
-      <div class="bg-slate-800/60 rounded-xl p-3 text-center"><p class="text-[10px] text-neon-cyan uppercase">Total Orders Target</p><p class="text-lg font-bold text-white">169</p></div>
-      <div class="bg-slate-800/60 rounded-xl p-3 text-center"><p class="text-[10px] text-neon-purple uppercase">Dixxon Target</p><p class="text-lg font-bold text-white">$11,000</p></div>
-      <div class="bg-slate-800/60 rounded-xl p-3 text-center"><p class="text-[10px] text-neon-cyan uppercase">Casio Target</p><p class="text-lg font-bold text-white">$13,763</p></div>
-      <div class="bg-slate-800/60 rounded-xl p-3 text-center"><p class="text-[10px] text-neon-purple uppercase">BYLT Target</p><p class="text-lg font-bold text-white">$3,000</p></div>
-      <div class="bg-slate-800/60 rounded-xl p-3 text-center"><p class="text-[10px] text-neon-purple uppercase">Gastown Target</p><p class="text-lg font-bold text-white">$1,250</p></div>
+<!-- SECTION 1: HEADER -->
+<div class="animate-fade-in text-center">
+  <div class="text-neon-cyan font-extrabold tracking-[0.22em] uppercase text-3xl md:text-4xl">E-Commerce KPI Report</div>
+  <div class="text-slate-400 text-sm mt-1 tracking-widest uppercase">September 18, 2026 &nbsp;&middot;&nbsp; Reporting Sep 17 Actuals</div>
+  <div class="flex flex-wrap justify-center gap-2 mt-3">
+    <div class="inline-block bg-cyan-500/20 border border-cyan-500/50 rounded-full px-4 py-1 text-cyan-400 text-xs font-bold tracking-widest uppercase">&#128197; Day 18 of 30 &middot; Friday</div>
+  </div>
+</div>
+
+<div class="animate-fade-in">
+  <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400 mb-3">Today's Daily Budget Targets &mdash; September 18, 2026 (Friday)</div>
+  <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+    <div class="bg-slate-800/60 rounded-xl border border-slate-700/50 p-3 text-center">
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Total Sales</div>
+      <div class="font-bold text-white text-lg">$36,516</div>
     </div>
-    <div class="border-l-4 border-cyan-400 bg-slate-800/40 rounded-lg p-4">
-      <p class="text-xs uppercase tracking-widest text-neon-cyan mb-2">&#9889; Today's Drops (Sep 17)</p>
-      <p class="text-sm text-slate-400">Dixxon &ndash; *No newness</p>
-      <p class="text-sm text-slate-400">Casio &ndash; *No newness</p>
+    <div class="bg-slate-800/60 rounded-xl border border-slate-700/50 p-3 text-center">
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Total Orders</div>
+      <div class="font-bold text-white text-lg">217</div>
+    </div>
+    <div class="bg-slate-800/60 rounded-xl border border-purple-500/30 p-3 text-center">
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Dixxon</div>
+      <div class="font-bold text-white text-lg">$18,000</div>
+    </div>
+    <div class="bg-slate-800/60 rounded-xl border border-cyan-500/30 p-3 text-center">
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Casio</div>
+      <div class="font-bold text-white text-lg">$13,763</div>
+    </div>
+    <div class="bg-slate-800/60 rounded-xl border border-slate-700/50 p-3 text-center">
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">BYLT</div>
+      <div class="font-bold text-white text-lg">$3,000</div>
+    </div>
+    <div class="bg-slate-800/60 rounded-xl border border-slate-700/50 p-3 text-center">
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Gastown</div>
+      <div class="font-bold text-white text-lg">$1,250</div>
     </div>
   </div>
-
-  <div>
-    <p class="text-xs uppercase tracking-widest text-slate-500 mb-3">September 16th Results</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="rounded-2xl bg-slate-900 border border-slate-700 p-5 animate-fade-in">
-        <p class="text-[10px] uppercase tracking-widest text-neon-cyan">Total Sales (Daily)</p>
-        <p class="text-3xl font-extrabold text-white mt-1">$40,835</p>
-        <p class="text-neon-green text-sm mt-1">&#9650; +$9,319 (+29.6%) vs target</p>
+</div>
+<div class="animate-fade-in">
+  <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400 mb-3">Today's Drops</div>
+  <div class="bg-slate-900 border border-purple-500/40 rounded-2xl p-5">
+    <div class="text-sm text-slate-300 text-center">
+      <span class="text-purple-400 font-bold uppercase tracking-wide">Dixxon:</span> <span class="text-white">10am &mdash; Layers Flannel [355] / Creek FR Flannel [225] / Gringo Drip Slips / Boxer Briefs: Nuts &amp; Solid Gray</span>
+    </div>
+    <div class="text-sm text-slate-300 text-center mt-1"><span class="text-white">Tradesmen Day: Working Class Appreciation Sale &mdash; 1 day only</span></div>
+    <div class="text-sm text-center mt-2"><span class="text-cyan-400 font-bold uppercase tracking-wide">Casio:</span> <span class="text-cyan-300">11am &mdash; GWBX5600 Series</span></div>
+  </div>
+</div>
+<div class="animate-fade-in">
+  <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400 mb-3">Sep 17 Results &mdash; All Stores</div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="bg-slate-900 border border-green-500/50 rounded-2xl p-5">
+      <div class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Total Sales</div>
+      <div class="text-4xl font-extrabold text-white">$37,374.07</div>
+      <div class="mt-1 text-sm"><span class="text-neon-green">&#9650; +$7,858.07 (+26.6%)</span>
+        <span class="text-slate-500 text-xs ml-1">vs $29,516 target</span>
       </div>
-      <div class="rounded-2xl bg-slate-900 border border-slate-700 p-5 animate-fade-in">
-        <p class="text-[10px] uppercase tracking-widest text-neon-cyan">Total Orders (Daily)</p>
-        <p class="text-3xl font-extrabold text-white mt-1">214</p>
-        <p class="text-neon-green text-sm mt-1">&#9650; +31.6 (+17.3%) vs target</p>
+      <svg class="w-full mt-4 h-12" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cgr1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4ade80" stop-opacity="0.4"/><stop offset="100%" stop-color="#4ade80" stop-opacity="0"/></linearGradient></defs>
+        <polygon points="0,15 20,15 40,15 60,15 80,15 100,15 120,15 120,40 0,40" fill="url(#cgr1)"/>
+        <polyline points="0,15 20,15 40,15 60,15 80,15 100,15 120,15" fill="none" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="bg-slate-900 border border-green-500/50 rounded-2xl p-5">
+      <div class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Total Orders</div>
+      <div class="text-4xl font-extrabold text-white">171</div>
+      <div class="mt-1 text-sm"><span class="text-neon-green">&#9650; +2 (+1.4%)</span>
+        <span class="text-slate-500 text-xs ml-1">vs 169 target</span>
       </div>
-      <div class="rounded-2xl bg-slate-900 border border-slate-700 p-5 animate-fade-in">
-        <p class="text-[10px] uppercase tracking-widest text-neon-cyan">Avg Order Value (Daily)</p>
-        <p class="text-3xl font-extrabold text-white mt-1">$191.30</p>
-      </div>
+      <svg class="w-full mt-4 h-12" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cgr2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4ade80" stop-opacity="0.4"/><stop offset="100%" stop-color="#4ade80" stop-opacity="0"/></linearGradient></defs>
+        <polygon points="0,15 20,15 40,15 60,15 80,15 100,15 120,15 120,40 0,40" fill="url(#cgr2)"/>
+        <polyline points="0,15 20,15 40,15 60,15 80,15 100,15 120,15" fill="none" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="bg-slate-900 border border-slate-600/50 rounded-2xl p-5">
+      <div class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Avg Order Value</div>
+      <div class="text-4xl font-extrabold text-white">$218.08</div>
+      <div class="mt-1 text-sm"><span class="text-slate-400 text-xs">All Stores blended AOV &middot; sales beat target by 26.6% but orders only by 1.4%, so the lift is ticket size, not volume &mdash; Gastown (+187.9%), Casio (+24.8%) and Dixxon (+20.5%) carried the day; Dixxon orders ran 6.4% under target, and Crailtap, Village PM, Forum and T5MRKT posted zero sales</span></div>
+      <svg class="w-full mt-4 h-12" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cgr3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#64748b" stop-opacity="0.3"/><stop offset="100%" stop-color="#64748b" stop-opacity="0"/></linearGradient></defs>
+        <polygon points="0,15 20,15 40,15 60,15 80,15 100,15 120,15 120,40 0,40" fill="url(#cgr3)"/>
+        <polyline points="0,15 20,15 40,15 60,15 80,15 100,15 120,15" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
     </div>
   </div>
-
+</div>
+<div class="animate-fade-in">
+  <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400 mb-3">MTD &amp; QTD Performance <span class="text-slate-600 normal-case tracking-normal">(MTD through Sep 17)</span></div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div class="rounded-2xl bg-slate-900 border border-blue-500/30 p-5 animate-fade-in">
-      <p class="text-xs uppercase tracking-widest text-slate-500 mb-3">Month-to-Date (MTD) Performance</p>
-      <p class="text-sm text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$646,560</span> vs $1,059,400 <span class="text-neon-green">(61% achieved)</span></p>
-      <div class="w-full bg-purple-500 rounded-full flex items-center p-1 mb-3 shadow-sm">
-        <span class="text-white text-[10px] font-bold px-2 shrink-0">61%</span>
-        <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
-          <div class="bg-white h-full rounded-full" style="width:61%"></div>
-        </div>
+    <div class="bg-slate-900 border border-purple-500/30 rounded-2xl p-5">
+      <div class="flex items-center justify-between mb-1">
+        <div class="text-[10px] uppercase tracking-widest text-slate-500">Sep MTD &mdash; All Stores (through Sep 17)</div>
+        <span class="bg-purple-500/20 border border-purple-500/40 rounded-full px-2 py-0.5 text-purple-400 text-[9px] font-bold tracking-widest uppercase">64.4% of $1,059,400 Goal</span>
       </div>
-      <p class="text-sm text-slate-400">MTD Sales (to-date): $646,560 vs $565,256 <span class="text-neon-green">(+$81,304 / +14.4%)</span></p>
-      <p class="text-sm text-slate-400">MTD Orders: 3,853 vs 3,283 <span class="text-neon-green">(+570 / +17.4%)</span></p>
-      <p class="text-sm text-slate-400">MTD AOV: $167.81</p>
-      <p class="text-sm text-slate-400 mt-2">Run Rate (Forecast): <span class="font-semibold text-white">$1,140,704</span> vs $1,059,400 <span class="text-neon-green">(+$81,304 / +108%)</span></p>
+      <div class="flex items-center justify-between mb-1 mt-3">
+        <div>
+          <div class="text-white font-bold text-xl">$682,664</div>
+          <div class="text-slate-500 text-xs">of $1,059,400 full-month goal (Sep 17)</div>
+        </div>
+        <div class="text-right"><span class="text-purple-400 font-bold text-xs">(64.4% of goal)</span></div>
+      </div>
+      <div class="w-full bg-purple-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
+      <span class="text-white text-[10px] font-bold px-2 shrink-0">64.4%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:64.4%"></div>
+      </div>
     </div>
-    <div class="rounded-2xl bg-slate-900 border border-orange-500/30 p-5 animate-fade-in">
-      <p class="text-xs uppercase tracking-widest text-slate-500 mb-3">Quarter-to-Date (QTD) Performance</p>
-      <p class="text-sm text-slate-300 mb-1">QTD Sales (total): <span class="font-semibold text-white">$3,076,976</span> vs $3,307,602 <span class="text-neon-orange">(93% achieved / $230,626 to goal)</span></p>
-      <div class="w-full bg-purple-500 rounded-full flex items-center p-1 mb-3 shadow-sm">
-        <span class="text-white text-[10px] font-bold px-2 shrink-0">93%</span>
-        <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
-          <div class="bg-white h-full rounded-full" style="width:93%"></div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">MTD Sales vs to-date target ($594,772)</span>
+          <span class="text-xs"><span class="text-neon-green">&#9650; +$87,892.49 (+14.8%)</span></span>
         </div>
-      </div>
-      <p class="text-sm text-slate-400">July (final): $1,257,053 (112.3% of $1,119,719 goal)</p>
-      <p class="text-sm text-slate-400">August (final): $1,173,362 (104.0% of $1,128,483 goal)</p>
-      <p class="text-sm text-slate-400">September (MTD): $646,560 of $1,059,400 goal &mdash; $412,840 remaining</p>
-      <p class="text-sm text-slate-400 mt-2">QTD Orders: 16,606</p>
-      <p class="text-sm text-slate-400">QTD AOV: $185.29</p>
-    </div>
-  </div>
-
-  <div>
-    <p class="text-xs uppercase tracking-widest text-slate-500 mb-3">Primary Brands Performance</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-
-
-    <div class="brand-card rounded-2xl bg-slate-900 border border-purple-500/40 shadow-neon-purple p-5 animate-fade-in">
-      <div class="flex items-center justify-between mb-3">
-        <h3 class="text-lg font-bold uppercase tracking-wide text-neon-purple">Dixxon</h3>
-        <span class="text-neon-green text-xs font-semibold px-2 py-1 rounded-full border border-current/30">+15.4% MTD</span>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Daily Performance</p>
-      <div class="grid grid-cols-2 gap-2 mb-3">
-        <div class="bg-slate-800/60 rounded-lg p-2">
-          <p class="text-[10px] text-slate-500 uppercase">Sales</p>
-          <p class="text-lg font-bold text-white">$18,277</p>
-          <span class="text-neon-green">&#9650; $5,277 (+40.6%)</span>
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">MTD Orders: 4,014 / 3,452 to-date target</span>
+          <span class="text-xs"><span class="text-neon-green">&#9650; +562 (+16.3%)</span></span>
         </div>
-        <div class="bg-slate-800/60 rounded-lg p-2">
-          <p class="text-[10px] text-slate-500 uppercase">Orders</p>
-          <p class="text-lg font-bold text-white">111</p>
-          <span class="text-neon-green">&#9650; +21.3 (+23.8%)</span>
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">MTD AOV</span>
+          <span class="text-white text-xs font-bold">$170.07</span>
         </div>
-      </div>
-      <div class="grid grid-cols-4 gap-1 text-center mb-4">
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">AOV</p><p class="text-xs font-semibold text-white">$165.78</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">UPT</p><p class="text-xs font-semibold text-white">3.4</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">CONV</p><p class="text-xs font-semibold text-white">2.34%</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">SESSIONS</p><p class="text-xs font-semibold text-white">4,060</p></div>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">MTD Performance</p>
-      <p class="text-xs text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$310,383</span> vs $499,000 <span class="text-neon-green">(62% achieved)</span></p>
-      <div class="w-full bg-green-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
-        <span class="text-white text-[10px] font-bold px-2 shrink-0">62%</span>
-        <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
-          <div class="bg-white h-full rounded-full" style="width:62%"></div>
-        </div>
-      </div>
-      <p class="text-[11px] text-slate-400">MTD Sales (to-date): $310,383 vs $269,000 <span class="text-neon-green">($41,383 / +15.4%)</span></p>
-      <p class="text-[11px] text-slate-400">MTD Orders: 1,956 vs 1,800 <span class="text-neon-green">(+156 / +8.7%)</span></p>
-      <p class="text-[11px] text-slate-400">MTD AOV: $158.68</p>
-      <p class="text-[11px] text-slate-400">Run Rate: $540,383 vs $499,000 <span class="text-neon-green">($41,383 / 108%)</span></p>
-    </div>
-    
-    <div class="brand-card rounded-2xl bg-slate-900 border border-cyan-500/40 shadow-neon-cyan p-5 animate-fade-in">
-      <div class="flex items-center justify-between mb-3">
-        <h3 class="text-lg font-bold uppercase tracking-wide text-neon-cyan">Casio</h3>
-        <span class="text-neon-green text-xs font-semibold px-2 py-1 rounded-full border border-current/30">+7.9% MTD</span>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Daily Performance</p>
-      <div class="grid grid-cols-2 gap-2 mb-3">
-        <div class="bg-slate-800/60 rounded-lg p-2">
-          <p class="text-[10px] text-slate-500 uppercase">Sales</p>
-          <p class="text-lg font-bold text-white">$15,829</p>
-          <span class="text-neon-green">&#9650; $2,066 (+15.0%)</span>
-        </div>
-        <div class="bg-slate-800/60 rounded-lg p-2">
-          <p class="text-[10px] text-slate-500 uppercase">Orders</p>
-          <p class="text-lg font-bold text-white">77</p>
-          <span class="text-neon-green">&#9650; +4.6 (+6.3%)</span>
-        </div>
-      </div>
-      <div class="grid grid-cols-4 gap-1 text-center mb-4">
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">AOV</p><p class="text-xs font-semibold text-white">$240.47</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">UPT</p><p class="text-xs font-semibold text-white">&mdash;</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">CONV</p><p class="text-xs font-semibold text-white">0.51%</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">SESSIONS</p><p class="text-xs font-semibold text-white">8,930</p></div>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">MTD Performance</p>
-      <p class="text-xs text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$237,662</span> vs $412,890 <span class="text-neon-green">(58% achieved)</span></p>
-      <div class="w-full bg-green-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
-        <span class="text-white text-[10px] font-bold px-2 shrink-0">58%</span>
-        <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
-          <div class="bg-white h-full rounded-full" style="width:58%"></div>
-        </div>
-      </div>
-      <p class="text-[11px] text-slate-400">MTD Sales (to-date): $237,662 vs $220,208 <span class="text-neon-green">($17,454 / +7.9%)</span></p>
-      <p class="text-[11px] text-slate-400">MTD Orders: 1,426 vs 1,159 <span class="text-neon-green">(+267 / +23.0%)</span></p>
-      <p class="text-[11px] text-slate-400">MTD AOV: $166.66</p>
-      <p class="text-[11px] text-slate-400">Run Rate: $444,107 vs $412,890 <span class="text-neon-green">($31,217 / 108%)</span></p>
-    </div>
-    
-    <div class="brand-card rounded-2xl bg-slate-900 border border-purple-500/40 p-5 animate-fade-in">
-      <div class="flex items-center justify-between mb-3">
-        <h3 class="text-lg font-bold uppercase tracking-wide text-neon-purple">BYLT</h3>
-        <span class="text-neon-green text-xs font-semibold px-2 py-1 rounded-full border border-current/30">+31.1% MTD</span>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Daily Performance</p>
-      <div class="grid grid-cols-2 gap-2 mb-3">
-        <div class="bg-slate-800/60 rounded-lg p-2">
-          <p class="text-[10px] text-slate-500 uppercase">Sales</p>
-          <p class="text-lg font-bold text-white">$4,338</p>
-          <span class="text-neon-green">&#9650; $1,338 (+44.6%)</span>
-        </div>
-        <div class="bg-slate-800/60 rounded-lg p-2">
-          <p class="text-[10px] text-slate-500 uppercase">Orders</p>
-          <p class="text-lg font-bold text-white">18</p>
-          <span class="text-neon-green">&#9650; +5.0 (+38.0%)</span>
-        </div>
-      </div>
-      <div class="grid grid-cols-4 gap-1 text-center mb-4">
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">AOV</p><p class="text-xs font-semibold text-white">$237.97</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">UPT</p><p class="text-xs font-semibold text-white">&mdash;</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">CONV</p><p class="text-xs font-semibold text-white">2.01%</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">SESSIONS</p><p class="text-xs font-semibold text-white">646</p></div>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">MTD Performance</p>
-      <p class="text-xs text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$62,910</span> vs $90,000 <span class="text-neon-green">(70% achieved)</span></p>
-      <div class="w-full bg-green-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
-        <span class="text-white text-[10px] font-bold px-2 shrink-0">70%</span>
-        <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
-          <div class="bg-white h-full rounded-full" style="width:70%"></div>
-        </div>
-      </div>
-      <p class="text-[11px] text-slate-400">MTD Sales (to-date): $62,910 vs $48,000 <span class="text-neon-green">($14,910 / +31.1%)</span></p>
-      <p class="text-[11px] text-slate-400">MTD Orders: 307 vs 209 <span class="text-neon-green">(+98 / +47.1%)</span></p>
-      <p class="text-[11px] text-slate-400">MTD AOV: $204.92</p>
-      <p class="text-[11px] text-slate-400">Run Rate: $104,910 vs $90,000 <span class="text-neon-green">($14,910 / 117%)</span></p>
-    </div>
-    
-    <div class="brand-card rounded-2xl bg-slate-900 border border-purple-500/40 p-5 animate-fade-in">
-      <div class="flex items-center justify-between mb-3">
-        <h3 class="text-lg font-bold uppercase tracking-wide text-neon-purple">Gastown</h3>
-        <span class="text-neon-green text-xs font-semibold px-2 py-1 rounded-full border border-current/30">+33.7% MTD</span>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Daily Performance</p>
-      <div class="grid grid-cols-2 gap-2 mb-3">
-        <div class="bg-slate-800/60 rounded-lg p-2">
-          <p class="text-[10px] text-slate-500 uppercase">Sales</p>
-          <p class="text-lg font-bold text-white">$1,630</p>
-          <span class="text-neon-green">&#9650; $380 (+30.4%)</span>
-        </div>
-        <div class="bg-slate-800/60 rounded-lg p-2">
-          <p class="text-[10px] text-slate-500 uppercase">Orders</p>
-          <p class="text-lg font-bold text-white">2</p>
-          <span class="text-neon-red">&#9660; -0.9 (-32.0%)</span>
-        </div>
-      </div>
-      <div class="grid grid-cols-4 gap-1 text-center mb-4">
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">AOV</p><p class="text-xs font-semibold text-white">$814.99</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">UPT</p><p class="text-xs font-semibold text-white">2.0</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">CONV</p><p class="text-xs font-semibold text-white">0.89%</p></div>
-        <div class="bg-slate-800/40 rounded p-1"><p class="text-[9px] text-slate-500">SESSIONS</p><p class="text-xs font-semibold text-white">225</p></div>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">MTD Performance</p>
-      <p class="text-xs text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$26,749</span> vs $37,500 <span class="text-neon-green">(71% achieved)</span></p>
-      <div class="w-full bg-green-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
-        <span class="text-white text-[10px] font-bold px-2 shrink-0">71%</span>
-        <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
-          <div class="bg-white h-full rounded-full" style="width:71%"></div>
-        </div>
-      </div>
-      <p class="text-[11px] text-slate-400">MTD Sales (to-date): $26,749 vs $20,000 <span class="text-neon-green">($6,749 / +33.7%)</span></p>
-      <p class="text-[11px] text-slate-400">MTD Orders: 83 vs 47 <span class="text-neon-green">(+36 / +76.4%)</span></p>
-      <p class="text-[11px] text-slate-400">MTD AOV: $322.28</p>
-      <p class="text-[11px] text-slate-400">Run Rate: $44,249 vs $37,500 <span class="text-neon-green">($6,749 / 118%)</span></p>
-    </div>
-    
-
-    </div>
-  </div>
-
-  <div class="rounded-2xl bg-slate-900 border border-purple-500/30 p-5 animate-fade-in">
-    <div class="flex items-center justify-between mb-3">
-      <p class="text-xs uppercase tracking-widest text-slate-500">&#128241; Dixxon App &ndash; Performance</p>
-      <span class="text-xs text-slate-400">App Users: <span class="text-neon-purple font-semibold">6,699</span> / 3,424 Push Subscribers</span>
-    </div>
-    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Daily (Sep 16)</p>
-    <div class="grid grid-cols-2 md:grid-cols-6 gap-3 mb-4">
-      <div class="bg-slate-800/70 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">App Sales</p><p class="text-base font-bold text-white">$4,322.82</p><p class="text-[10px] text-neon-purple">23.7% of Dixxon daily</p></div>
-      <div class="bg-slate-800/70 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">App Sessions</p><p class="text-base font-bold text-white">409</p><p class="text-[10px] text-neon-purple">10.1% of Dixxon daily</p></div>
-      <div class="bg-slate-800/70 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">Orders</p><p class="text-base font-bold text-white">24</p><p class="text-[10px] text-neon-purple">21.6% of Dixxon daily</p></div>
-      <div class="bg-slate-800/70 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">App Installs</p><p class="text-base font-bold text-white">16</p></div>
-      <div class="bg-slate-800/70 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">Signed Up Users</p><p class="text-base font-bold text-white">8</p></div>
-      <div class="bg-slate-800/70 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">Push Subscribers</p><p class="text-base font-bold text-white">3,424</p></div>
-    </div>
-    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-2">September MTD (through Sep 16)</p>
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-3">
-      <div class="bg-purple-950/30 border border-purple-500/30 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">App Sales MTD</p><p class="text-base font-bold text-white">$101,509.82</p><p class="text-[10px] text-neon-purple">32.7% of Dixxon MTD</p></div>
-      <div class="bg-purple-950/30 border border-purple-500/30 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">App Orders MTD</p><p class="text-base font-bold text-white">570</p><p class="text-[10px] text-neon-purple">29.1% of Dixxon MTD</p></div>
-      <div class="bg-purple-950/30 border border-purple-500/30 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">Sessions MTD</p><p class="text-base font-bold text-white">9,538</p></div>
-      <div class="bg-purple-950/30 border border-purple-500/30 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">Installs MTD</p><p class="text-base font-bold text-white">310</p></div>
-      <div class="bg-purple-950/30 border border-purple-500/30 rounded-xl p-3 text-center"><p class="text-[9px] text-slate-500 uppercase">Signups MTD</p><p class="text-base font-bold text-white">167+</p></div>
-    </div>
-  </div>
-
-  <div>
-    <p class="text-xs uppercase tracking-widest text-slate-500 mb-3">Additional Brands Performance</p>
-    <div class="space-y-3">
-
-
-    <div class="rounded-xl bg-slate-900/80 border-l-4 border-fuchsia-400 p-4 grid" style="grid-template-columns: 130px auto 1fr; gap: 1rem; align-items:center;">
-      <h4 class="text-sm font-bold uppercase text-fuchsia-400">Jason Markk</h4>
-      <div class="flex gap-4 text-xs text-slate-300">
-        <div><p class="text-[9px] text-slate-500 uppercase">Sales</p><p class="font-semibold text-white">$0</p><span class="text-neon-red text-[10px]">-100%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Orders</p><p class="font-semibold text-white">0</p><span class="text-neon-red text-[10px]">-100%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Sessions</p><p class="font-semibold text-white">23</p></div>
-      </div>
-      <div>
-        <p class="text-[11px] text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$656</span> vs $2,100 <span class="text-neon-green">(31% achieved)</span></p>
-        <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mb-1">
-          <span class="text-white text-[9px] font-bold px-1.5 shrink-0">31%</span>
-          <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
-            <div class="bg-white h-full rounded-full" style="width:31%"></div>
-          </div>
-        </div>
-        <div class="flex gap-3 text-[10px] text-slate-400">
-          <span>MTD Orders: 19 vs 19</span>
-          <span>MTD AOV: $34.55</span>
-          <span>Run Rate: $1,986 (95%)</span>
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">Full Month Forecast (Run Rate)</span>
+          <span class="text-xs"><span class="text-neon-green">&#9650; +$87,892.49 (+8.3%)</span> <span class="text-slate-400">$1,147,292</span></span>
         </div>
       </div>
     </div>
-    
-    <div class="rounded-xl bg-slate-900/80 border-l-4 border-indigo-400 p-4 grid" style="grid-template-columns: 130px auto 1fr; gap: 1rem; align-items:center;">
-      <h4 class="text-sm font-bold uppercase text-indigo-400">Crailtap</h4>
-      <div class="flex gap-4 text-xs text-slate-300">
-        <div><p class="text-[9px] text-slate-500 uppercase">Sales</p><p class="font-semibold text-white">$0</p><span class="text-neon-red text-[10px]">-100%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Orders</p><p class="font-semibold text-white">0</p><span class="text-neon-red text-[10px]">-100%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Sessions</p><p class="font-semibold text-white">28</p></div>
+    <div class="bg-slate-900 border border-purple-500/30 rounded-2xl p-5">
+      <div class="flex items-center justify-between mb-1">
+        <div class="text-[10px] uppercase tracking-widest text-slate-500">Q3 2026 QTD &mdash; All Stores</div>
+        <span class="bg-cyan-500/20 border border-cyan-500/40 rounded-full px-2 py-0.5 text-cyan-400 text-[9px] font-bold tracking-widest uppercase">&#128260; July + August Final Carried Forward</span>
       </div>
-      <div>
-        <p class="text-[11px] text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$0</span> vs $300 <span class="text-neon-green">(0% achieved)</span></p>
-        <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mb-1">
-          <span class="text-white text-[9px] font-bold px-1.5 shrink-0">0%</span>
-          <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
-            <div class="bg-white h-full rounded-full" style="width:0%"></div>
-          </div>
+      <div class="flex items-center justify-between mb-1 mt-3">
+        <div>
+          <div class="text-white font-bold text-xl">$3,113,080</div>
+          <div class="text-slate-500 text-xs">of $3,307,602 Q3 goal (July Final + August Final + Sep MTD)</div>
         </div>
-        <div class="flex gap-3 text-[10px] text-slate-400">
-          <span>MTD Orders: 0 vs 2</span>
-          <span>MTD AOV: $0.00</span>
-          <span>Run Rate: $300 (100%)</span>
-        </div>
+        <div class="text-right"><span class="text-purple-400 font-bold text-xs">(94.1% of Q3 goal)</span></div>
+      </div>
+      <div class="w-full bg-purple-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
+      <span class="text-white text-[10px] font-bold px-2 shrink-0">94.1%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:94.1%"></div>
       </div>
     </div>
-    
-    <div class="rounded-xl bg-slate-900/80 border-l-4 border-emerald-400 p-4 grid" style="grid-template-columns: 130px auto 1fr; gap: 1rem; align-items:center;">
-      <h4 class="text-sm font-bold uppercase text-emerald-400">Village PM</h4>
-      <div class="flex gap-4 text-xs text-slate-300">
-        <div><p class="text-[9px] text-slate-500 uppercase">Sales</p><p class="font-semibold text-white">$681</p><span class="text-neon-green text-[10px]">+873%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Orders</p><p class="font-semibold text-white">3</p><span class="text-neon-green text-[10px]">+479%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Sessions</p><p class="font-semibold text-white">537</p></div>
-      </div>
-      <div>
-        <p class="text-[11px] text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$1,523</span> vs $7,020 <span class="text-neon-green">(22% achieved)</span></p>
-        <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mb-1">
-          <span class="text-white text-[9px] font-bold px-1.5 shrink-0">22%</span>
-          <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
-            <div class="bg-white h-full rounded-full" style="width:22%"></div>
-          </div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">Q3 Sales (July + Aug Final + Sep MTD)</span>
+          <span class="text-white text-xs font-bold">$3,113,080</span>
         </div>
-        <div class="flex gap-3 text-[10px] text-slate-400">
-          <span>MTD Orders: 9 vs 8</span>
-          <span>MTD AOV: $169.22</span>
-          <span>Run Rate: $7,913 (113%)</span>
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">Q3 Orders (July + Aug Final + Sep MTD)</span>
+          <span class="text-white text-xs font-bold">16,767</span>
         </div>
-      </div>
-    </div>
-    
-    <div class="rounded-xl bg-slate-900/80 border-l-4 border-slate-400 p-4 grid" style="grid-template-columns: 130px auto 1fr; gap: 1rem; align-items:center;">
-      <h4 class="text-sm font-bold uppercase text-slate-400">Forum</h4>
-      <div class="flex gap-4 text-xs text-slate-300">
-        <div><p class="text-[9px] text-slate-500 uppercase">Sales</p><p class="font-semibold text-white">$0</p><span class="text-neon-red text-[10px]">-100%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Orders</p><p class="font-semibold text-white">0</p><span class="text-neon-green text-[10px]">+0%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Sessions</p><p class="font-semibold text-white">23</p></div>
-      </div>
-      <div>
-        <p class="text-[11px] text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$651</span> vs $300 <span class="text-neon-green">(217% achieved)</span></p>
-        <div class="w-full bg-orange-500 rounded-full flex items-center p-0.5 mb-1">
-          <span class="text-white text-[9px] font-bold px-1.5 shrink-0">217%</span>
-          <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
-            <div class="bg-white h-full rounded-full" style="width:100%"></div>
-          </div>
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">Q3 Goal</span>
+          <span class="text-white text-xs font-bold">$3,307,602</span>
         </div>
-        <div class="flex gap-3 text-[10px] text-slate-400">
-          <span>MTD Orders: 4 vs 0</span>
-          <span>MTD AOV: $162.73</span>
-          <span>Run Rate: $901 (300%)</span>
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">Remaining to Q3 goal</span>
+          <span class="text-white text-xs font-bold">$194,522</span>
+        </div>
+        <div class="flex justify-between items-center bg-slate-800/60 rounded-lg px-3 py-2">
+          <span class="text-slate-400 text-xs">July + August Final Result</span>
+          <span class="text-yellow-400 text-xs font-bold">$2,430,415 &middot; 108.1% &#10003; Beat combined goal</span>
         </div>
       </div>
-    </div>
-    
-    <div class="rounded-xl bg-slate-900/80 border-l-4 border-orange-400 p-4 grid" style="grid-template-columns: 130px auto 1fr; gap: 1rem; align-items:center;">
-      <h4 class="text-sm font-bold uppercase text-orange-400">Fulton &amp; Roark</h4>
-      <div class="flex gap-4 text-xs text-slate-300">
-        <div><p class="text-[9px] text-slate-500 uppercase">Sales</p><p class="font-semibold text-white">$80</p><span class="text-neon-red text-[10px]">-66%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Orders</p><p class="font-semibold text-white">2</p><span class="text-neon-green text-[10px]">+100%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Sessions</p><p class="font-semibold text-white">172</p></div>
-      </div>
-      <div>
-        <p class="text-[11px] text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$3,919</span> vs $6,990 <span class="text-neon-green">(56% achieved)</span></p>
-        <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mb-1">
-          <span class="text-white text-[9px] font-bold px-1.5 shrink-0">56%</span>
-          <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
-            <div class="bg-white h-full rounded-full" style="width:56%"></div>
-          </div>
-        </div>
-        <div class="flex gap-3 text-[10px] text-slate-400">
-          <span>MTD Orders: 33 vs 17</span>
-          <span>MTD AOV: $118.76</span>
-          <span>Run Rate: $7,647 (109%)</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="rounded-xl bg-slate-900/80 border-l-4 border-sky-400 p-4 grid" style="grid-template-columns: 130px auto 1fr; gap: 1rem; align-items:center;">
-      <h4 class="text-sm font-bold uppercase text-sky-400">Jack Henry</h4>
-      <div class="flex gap-4 text-xs text-slate-300">
-        <div><p class="text-[9px] text-slate-500 uppercase">Sales</p><p class="font-semibold text-white">$0</p><span class="text-neon-red text-[10px]">-100%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Orders</p><p class="font-semibold text-white">1</p><span class="text-neon-red text-[10px]">-35%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Sessions</p><p class="font-semibold text-white">220</p></div>
-      </div>
-      <div>
-        <p class="text-[11px] text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$1,717</span> vs $3,000 <span class="text-neon-green">(57% achieved)</span></p>
-        <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mb-1">
-          <span class="text-white text-[9px] font-bold px-1.5 shrink-0">57%</span>
-          <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
-            <div class="bg-white h-full rounded-full" style="width:57%"></div>
-          </div>
-        </div>
-        <div class="flex gap-3 text-[10px] text-slate-400">
-          <span>MTD Orders: 19 vs 21</span>
-          <span>MTD AOV: $90.35</span>
-          <span>Run Rate: $3,417 (114%)</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="rounded-xl bg-slate-900/80 border-l-4 border-pink-400 p-4 grid" style="grid-template-columns: 130px auto 1fr; gap: 1rem; align-items:center;">
-      <h4 class="text-sm font-bold uppercase text-pink-400">T5MRKT</h4>
-      <div class="flex gap-4 text-xs text-slate-300">
-        <div><p class="text-[9px] text-slate-500 uppercase">Sales</p><p class="font-semibold text-white">$0</p><span class="text-neon-red text-[10px]">-100%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Orders</p><p class="font-semibold text-white">0</p><span class="text-neon-green text-[10px]">+0%</span></div>
-        <div><p class="text-[9px] text-slate-500 uppercase">Sessions</p><p class="font-semibold text-white">5</p></div>
-      </div>
-      <div>
-        <p class="text-[11px] text-slate-300 mb-1">MTD Sales (total): <span class="font-semibold text-white">$390</span> vs $300 <span class="text-neon-green">(130% achieved)</span></p>
-        <div class="w-full bg-orange-500 rounded-full flex items-center p-0.5 mb-1">
-          <span class="text-white text-[9px] font-bold px-1.5 shrink-0">130%</span>
-          <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
-            <div class="bg-white h-full rounded-full" style="width:100%"></div>
-          </div>
-        </div>
-        <div class="flex gap-3 text-[10px] text-slate-400">
-          <span>MTD Orders: 1 vs 0</span>
-          <span>MTD AOV: $390.00</span>
-          <span>Run Rate: $660 (220%)</span>
-        </div>
-      </div>
-    </div>
-    
     </div>
   </div>
-
-  <footer class="text-center text-[11px] text-slate-600 pt-4">Generated from live "Sep 2026 Ecomm KPI Report" &middot; As-of Sep 16, 2026 &middot; Dixxon App data via manual daily input</footer>
+</div>
+<div class="animate-fade-in">
+  <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400 mb-3">Primary Brands &mdash; Sep 17 Performance &middot; MTD Day 17</div>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="bg-slate-900 border border-purple-500/40 rounded-2xl p-5 shadow-neon-purple">
+      <div class="flex items-center justify-between mb-3">
+        <div class="font-extrabold tracking-[0.18em] uppercase text-white text-lg">DIXXON</div>
+        <span class="bg-slate-800 border border-slate-600/40 rounded-full px-2 py-0.5 text-purple-400 text-[9px] font-bold">64.7% MTD</span>
+      </div>
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-2">Daily Performance &mdash; Sep 17</div>
+      <div class="bg-slate-800/60 rounded-xl px-3 py-2 mb-2 flex justify-between items-center">
+        <span class="text-[9px] text-slate-500 uppercase">Sales</span>
+        <div class="text-right"><span class="text-white font-bold text-sm">$13,259.53</span>
+          <span class="text-xs ml-2"><span class="text-neon-green">&#9650; +$2,259.53 (+20.5%)</span></span></div>
+      </div>
+      <div class="bg-slate-800/60 rounded-xl px-3 py-2 mb-3 flex justify-between items-center">
+        <span class="text-[9px] text-slate-500 uppercase">Orders</span>
+        <div class="text-right"><span class="text-white font-bold text-sm">71</span>
+          <span class="text-xs ml-2"><span class="text-neon-red">&#9660; -5 (-6.4%)</span></span></div>
+      </div>
+      <div class="grid grid-cols-4 gap-1 mb-4">
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">AOV</div><div class="text-white text-xs font-bold">$186.66</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">UPT</div><div class="text-white text-xs font-bold">3.69</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">Conv</div><div class="text-white text-xs font-bold">1.76%</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">Sess</div><div class="text-white text-xs font-bold">3,580</div></div>
+      </div>
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-2">MTD Performance (Sep 17)</div>
+      <div class="mb-1 flex justify-between items-center">
+        <span class="text-white font-bold">$323,027</span>
+        <span class="text-purple-400 font-bold text-xs">(64.7% of $499,000 goal)</span>
+      </div>
+      <div class="w-full bg-green-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
+      <span class="text-white text-[10px] font-bold px-2 shrink-0">64.7%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:64.7%"></div>
+      </div>
+    </div>
+      <div class="text-xs text-slate-500 mb-1">$323,027 vs $280,000 to-date target <span class="text-neon-green">&#9650; +$43,026.99 (+15.4%)</span></div>
+      <div class="text-xs text-slate-500 mb-1">Orders: 2,024 / 1,876 to-date target <span class="text-neon-green">&#9650; +148 (+7.9%)</span></div>
+      <div class="text-xs text-slate-500 mb-3">MTD AOV: <span class="text-white font-bold">$159.60</span></div>
+      <div class="border-t border-slate-700/50 pt-3">
+        <div class="text-xs text-slate-500">Run Rate (Projected): <span class="font-bold">$542,027</span> vs $499,000 goal <span class="font-bold text-neon-green">(+8.6%)</span></div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-cyan-500/40 rounded-2xl p-5 shadow-neon-cyan">
+      <div class="flex items-center justify-between mb-3">
+        <div class="font-extrabold tracking-[0.18em] uppercase text-neon-cyan text-lg">CASIO</div>
+        <span class="bg-slate-800 border border-slate-600/40 rounded-full px-2 py-0.5 text-purple-400 text-[9px] font-bold">61.7% MTD</span>
+      </div>
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-2">Daily Performance &mdash; Sep 17</div>
+      <div class="bg-slate-800/60 rounded-xl px-3 py-2 mb-2 flex justify-between items-center">
+        <span class="text-[9px] text-slate-500 uppercase">Sales</span>
+        <div class="text-right"><span class="text-white font-bold text-sm">$17,172.84</span>
+          <span class="text-xs ml-2"><span class="text-neon-green">&#9650; +$3,409.84 (+24.8%)</span></span></div>
+      </div>
+      <div class="bg-slate-800/60 rounded-xl px-3 py-2 mb-3 flex justify-between items-center">
+        <span class="text-[9px] text-slate-500 uppercase">Orders</span>
+        <div class="text-right"><span class="text-white font-bold text-sm">76</span>
+          <span class="text-xs ml-2"><span class="text-neon-green">&#9650; +4 (+4.9%)</span></span></div>
+      </div>
+      <div class="grid grid-cols-4 gap-1 mb-4">
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">AOV</div><div class="text-white text-xs font-bold">$225.96</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">UPT</div><div class="text-white text-xs font-bold">N/A</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">Conv</div><div class="text-white text-xs font-bold">0.58%</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">Sess</div><div class="text-white text-xs font-bold">8,379</div></div>
+      </div>
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-2">MTD Performance (Sep 17)</div>
+      <div class="mb-1 flex justify-between items-center">
+        <span class="text-white font-bold">$254,835</span>
+        <span class="text-purple-400 font-bold text-xs">(61.7% of $412,890 goal)</span>
+      </div>
+      <div class="w-full bg-green-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
+      <span class="text-white text-[10px] font-bold px-2 shrink-0">61.7%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:61.7%"></div>
+      </div>
+    </div>
+      <div class="text-xs text-slate-500 mb-1">$254,835 vs $233,971 to-date target <span class="text-neon-green">&#9650; +$20,863.62 (+8.9%)</span></div>
+      <div class="text-xs text-slate-500 mb-1">Orders: 1,502 / 1,231 to-date target <span class="text-neon-green">&#9650; +271 (+22.0%)</span></div>
+      <div class="text-xs text-slate-500 mb-3">MTD AOV: <span class="text-white font-bold">$169.66</span></div>
+      <div class="border-t border-slate-700/50 pt-3">
+        <div class="text-xs text-slate-500">Run Rate (Projected): <span class="font-bold">$447,517</span> vs $412,890 goal <span class="font-bold text-neon-green">(+8.4%)</span></div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-purple-500/40 rounded-2xl p-5 ">
+      <div class="flex items-center justify-between mb-3">
+        <div class="font-extrabold tracking-[0.18em] uppercase text-white text-lg">BYLT</div>
+        <span class="bg-slate-800 border border-slate-600/40 rounded-full px-2 py-0.5 text-purple-400 text-[9px] font-bold">72.5% MTD</span>
+      </div>
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-2">Daily Performance &mdash; Sep 17</div>
+      <div class="bg-slate-800/60 rounded-xl px-3 py-2 mb-2 flex justify-between items-center">
+        <span class="text-[9px] text-slate-500 uppercase">Sales</span>
+        <div class="text-right"><span class="text-white font-bold text-sm">$3,012.71</span>
+          <span class="text-xs ml-2"><span class="text-neon-green">&#9650; +$12.71 (+0.4%)</span></span></div>
+      </div>
+      <div class="bg-slate-800/60 rounded-xl px-3 py-2 mb-3 flex justify-between items-center">
+        <span class="text-[9px] text-slate-500 uppercase">Orders</span>
+        <div class="text-right"><span class="text-white font-bold text-sm">15</span>
+          <span class="text-xs ml-2"><span class="text-neon-green">&#9650; +2 (+15.0%)</span></span></div>
+      </div>
+      <div class="grid grid-cols-4 gap-1 mb-4">
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">AOV</div><div class="text-white text-xs font-bold">$195.73</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">UPT</div><div class="text-white text-xs font-bold">2.53</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">Conv</div><div class="text-white text-xs font-bold">2.20%</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">Sess</div><div class="text-white text-xs font-bold">727</div></div>
+      </div>
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-2">MTD Performance (Sep 17)</div>
+      <div class="mb-1 flex justify-between items-center">
+        <span class="text-white font-bold">$65,269</span>
+        <span class="text-purple-400 font-bold text-xs">(72.5% of $90,000 goal)</span>
+      </div>
+      <div class="w-full bg-green-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
+      <span class="text-white text-[10px] font-bold px-2 shrink-0">72.5%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:72.5%"></div>
+      </div>
+    </div>
+      <div class="text-xs text-slate-500 mb-1">$65,269 vs $51,000 to-date target <span class="text-neon-green">&#9650; +$14,268.65 (+28.0%)</span></div>
+      <div class="text-xs text-slate-500 mb-1">Orders: 319 / 222 to-date target <span class="text-neon-green">&#9650; +97 (+43.9%)</span></div>
+      <div class="text-xs text-slate-500 mb-3">MTD AOV: <span class="text-white font-bold">$204.60</span></div>
+      <div class="border-t border-slate-700/50 pt-3">
+        <div class="text-xs text-slate-500">Run Rate (Projected): <span class="font-bold">$104,269</span> vs $90,000 goal <span class="font-bold text-neon-green">(+15.9%)</span></div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-purple-500/40 rounded-2xl p-5 ">
+      <div class="flex items-center justify-between mb-3">
+        <div class="font-extrabold tracking-[0.18em] uppercase text-white text-lg">GASTOWN</div>
+        <span class="bg-slate-800 border border-slate-600/40 rounded-full px-2 py-0.5 text-purple-400 text-[9px] font-bold">80.9% MTD</span>
+      </div>
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-2">Daily Performance &mdash; Sep 17</div>
+      <div class="bg-slate-800/60 rounded-xl px-3 py-2 mb-2 flex justify-between items-center">
+        <span class="text-[9px] text-slate-500 uppercase">Sales</span>
+        <div class="text-right"><span class="text-white font-bold text-sm">$3,598.54</span>
+          <span class="text-xs ml-2"><span class="text-neon-green">&#9650; +$2,348.54 (+187.9%)</span></span></div>
+      </div>
+      <div class="bg-slate-800/60 rounded-xl px-3 py-2 mb-3 flex justify-between items-center">
+        <span class="text-[9px] text-slate-500 uppercase">Orders</span>
+        <div class="text-right"><span class="text-white font-bold text-sm">4</span>
+          <span class="text-xs ml-2"><span class="text-neon-green">&#9650; +1 (+36.0%)</span></span></div>
+      </div>
+      <div class="grid grid-cols-4 gap-1 mb-4">
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">AOV</div><div class="text-white text-xs font-bold">$874.99</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">UPT</div><div class="text-white text-xs font-bold">1.14</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">Conv</div><div class="text-white text-xs font-bold">1.27%</div></div>
+        <div class="bg-slate-800/60 rounded-lg p-1.5 text-center"><div class="text-[8px] text-slate-500 uppercase">Sess</div><div class="text-white text-xs font-bold">314</div></div>
+      </div>
+      <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-2">MTD Performance (Sep 17)</div>
+      <div class="mb-1 flex justify-between items-center">
+        <span class="text-white font-bold">$30,348</span>
+        <span class="text-purple-400 font-bold text-xs">(80.9% of $37,500 goal)</span>
+      </div>
+      <div class="w-full bg-green-500 rounded-full flex items-center p-1 mb-2 shadow-sm">
+      <span class="text-white text-[10px] font-bold px-2 shrink-0">80.9%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-3 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:80.9%"></div>
+      </div>
+    </div>
+      <div class="text-xs text-slate-500 mb-1">$30,348 vs $21,250 to-date target <span class="text-neon-green">&#9650; +$9,097.84 (+42.8%)</span></div>
+      <div class="text-xs text-slate-500 mb-1">Orders: 84 / 50 to-date target <span class="text-neon-green">&#9650; +34 (+68.0%)</span></div>
+      <div class="text-xs text-slate-500 mb-3">MTD AOV: <span class="text-white font-bold">$361.28</span></div>
+      <div class="border-t border-slate-700/50 pt-3">
+        <div class="text-xs text-slate-500">Run Rate (Projected): <span class="font-bold">$46,598</span> vs $37,500 goal <span class="font-bold text-neon-green">(+24.3%)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="animate-fade-in">
+  <div class="bg-slate-900 border border-purple-500/30 rounded-2xl p-5">
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-300">&#128241; Dixxon App &mdash; Sep 17 Performance</div>
+      <span class="bg-purple-500/20 border border-purple-500/40 rounded-full px-3 py-1 text-purple-400 text-[10px] font-bold">6,741 App Users &middot; 3,464 Push Subs</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-3">Daily (Sep 17)</div>
+        <div class="grid grid-cols-3 gap-2 mb-2">
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center">
+            <div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">App Sales</div>
+            <div class="text-white font-bold text-base">$2,125.67</div>
+            <div class="text-purple-400 text-[10px] mt-0.5">16.0% of Dixxon daily</div>
+          </div>
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center">
+            <div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">App Orders</div>
+            <div class="text-white font-bold text-base">11</div>
+            <div class="text-slate-400 text-[10px] mt-0.5">AOV $193.24</div>
+          </div>
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center">
+            <div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">Sessions</div>
+            <div class="text-white font-bold text-base">372</div>
+            <div class="text-slate-400 text-[10px] mt-0.5">Conv 3.0%</div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center"><div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">Installs</div><div class="text-neon-green font-bold text-base">15</div></div>
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center"><div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">Signed Up</div><div class="text-neon-green font-bold text-base">6</div></div>
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center"><div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">Push Subs</div><div class="text-slate-400 font-bold text-base">3,464</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-3">MTD (through Sep 17, rolling sum since Sep 1 reset)</div>
+        <div class="grid grid-cols-3 gap-2 mb-2">
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center">
+            <div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">App Sales MTD</div>
+            <div class="text-white font-bold text-base">$110,796.98</div>
+            <div class="text-fuchsia-400 text-[10px] mt-0.5">34.3% of Dixxon MTD</div>
+          </div>
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center">
+            <div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">App Orders MTD</div>
+            <div class="text-white font-bold text-base">629</div>
+            <div class="text-slate-400 text-[10px] mt-0.5">AOV $176.15 &middot; 31.1% of Dixxon orders</div>
+          </div>
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center"><div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">Sessions MTD</div><div class="text-white font-bold text-base">10,361</div></div>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center"><div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">Installs MTD</div><div class="text-neon-green font-bold text-base">335</div></div>
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center"><div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">Signups MTD</div><div class="text-neon-green font-bold text-base">189</div></div>
+          <div class="bg-slate-800/70 rounded-xl p-3 text-center"><div class="text-[8px] uppercase tracking-widest text-slate-500 mb-1">Total Users</div><div class="text-neon-cyan font-bold text-base">6,741</div><div class="text-slate-600 text-[9px] mt-0.5">Reported total, as of Sep 17</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="animate-fade-in">
+  <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400 mb-3">Additional Brands &mdash; Sep 17 Performance &middot; MTD Day 17</div>
+  <div class="flex flex-col gap-3">
+    <div class="bg-slate-900 border border-slate-700/50 border-l-4 border-l-fuchsia-400 rounded-xl p-4">
+      <div class="grid gap-4" style="grid-template-columns: 110px auto 1fr">
+        <div class="flex flex-col justify-center">
+          <div class="text-fuchsia-400 font-bold text-sm uppercase tracking-wide">Jason Markk</div>
+          <span class="text-[9px] bg-slate-800 text-slate-400 rounded px-1.5 py-0.5 mt-1 inline-block uppercase tracking-widest w-fit">Daily</span>
+        </div>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-1 text-xs items-center">
+          <div><span class="text-slate-500">Sales</span> <span class="text-white font-bold">$36</span> <span class="text-[10px]"><span class="text-neon-red">&#9660; -$34.30 (-49.0%)</span></span></div>
+          <div><span class="text-slate-500">Orders</span> <span class="text-white font-bold">1</span></div>
+          <div><span class="text-slate-500">AOV</span> <span class="text-white font-bold">$35.70</span></div>
+          <div><span class="text-slate-500">Sessions</span> <span class="text-white font-bold">44</span></div>
+          <div><span class="text-slate-500">Conv</span> <span class="text-white font-bold">2.27%</span></div>
+          <div><span class="text-slate-500">UPT</span> <span class="text-white font-bold">2.00</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <div class="text-white font-bold text-sm">$692.10</div>
+            <div class="text-[9px] text-slate-500 mb-1">vs $2,100 full goal</div>
+            <span class="text-blue-400 font-bold text-[10px]">(33.0% achieved)</span>
+            <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mt-1">
+      <span class="text-white text-[9px] font-bold px-1.5 shrink-0">33.0%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:33.0%"></div>
+      </div>
+    </div>
+            <div class="text-[10px] text-slate-500 mt-1">Orders: 20 / MTD AOV: $34.61</div>
+          </div>
+          <div class="text-xs">
+            <div class="text-slate-500">vs to-date $1,190: <span class="text-[10px]"><span class="text-neon-red">&#9660; -$497.90 (-41.8%)</span></span></div>
+            <div class="text-slate-500 mt-1">Run Rate (Projected): <span class="font-bold">$1,952.10</span> vs $2,100 <span class="font-bold text-neon-red">(-7.0%)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-slate-700/50 border-l-4 border-l-indigo-400 rounded-xl p-4">
+      <div class="grid gap-4" style="grid-template-columns: 110px auto 1fr">
+        <div class="flex flex-col justify-center">
+          <div class="text-indigo-400 font-bold text-sm uppercase tracking-wide">Crailtap</div>
+          <span class="text-[9px] bg-slate-800 text-slate-400 rounded px-1.5 py-0.5 mt-1 inline-block uppercase tracking-widest w-fit">Daily</span>
+        </div>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-1 text-xs items-center">
+          <div><span class="text-slate-500">Sales</span> <span class="text-white font-bold">$0</span> <span class="text-[10px]"><span class="text-neon-red">&#9660; -$10.00 (-100.0%)</span></span></div>
+          <div><span class="text-slate-500">Orders</span> <span class="text-white font-bold">0</span></div>
+          <div><span class="text-slate-500">AOV</span> <span class="text-white font-bold">&mdash;</span></div>
+          <div><span class="text-slate-500">Sessions</span> <span class="text-white font-bold">37</span></div>
+          <div><span class="text-slate-500">Conv</span> <span class="text-white font-bold">0.00%</span></div>
+          <div><span class="text-slate-500">UPT</span> <span class="text-white font-bold">N/A</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <div class="text-white font-bold text-sm">$0.00</div>
+            <div class="text-[9px] text-slate-500 mb-1">vs $300 full goal</div>
+            <span class="text-blue-400 font-bold text-[10px]">(0.0% achieved)</span>
+            <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mt-1">
+      <span class="text-white text-[9px] font-bold px-1.5 shrink-0">0.0%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:0.0%"></div>
+      </div>
+    </div>
+            <div class="text-[10px] text-slate-500 mt-1">Orders: 0 / MTD AOV: N/A</div>
+          </div>
+          <div class="text-xs">
+            <div class="text-slate-500">vs to-date $170: <span class="text-[10px]"><span class="text-neon-red">&#9660; -$170.00 (-100.0%)</span></span></div>
+            <div class="text-slate-500 mt-1">Run Rate (Projected): <span class="font-bold">$300.00</span> vs $300 <span class="font-bold text-neon-green">(+0.0%)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-slate-700/50 border-l-4 border-l-emerald-400 rounded-xl p-4">
+      <div class="grid gap-4" style="grid-template-columns: 110px auto 1fr">
+        <div class="flex flex-col justify-center">
+          <div class="text-emerald-400 font-bold text-sm uppercase tracking-wide">Village PM</div>
+          <span class="text-[9px] bg-slate-800 text-slate-400 rounded px-1.5 py-0.5 mt-1 inline-block uppercase tracking-widest w-fit">Daily</span>
+        </div>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-1 text-xs items-center">
+          <div><span class="text-slate-500">Sales</span> <span class="text-white font-bold">$0</span> <span class="text-[10px]"><span class="text-neon-red">&#9660; -$70.00 (-100.0%)</span></span></div>
+          <div><span class="text-slate-500">Orders</span> <span class="text-white font-bold">0</span></div>
+          <div><span class="text-slate-500">AOV</span> <span class="text-white font-bold">&mdash;</span></div>
+          <div><span class="text-slate-500">Sessions</span> <span class="text-white font-bold">145</span></div>
+          <div><span class="text-slate-500">Conv</span> <span class="text-white font-bold">0.60%</span></div>
+          <div><span class="text-slate-500">UPT</span> <span class="text-white font-bold">N/A</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <div class="text-white font-bold text-sm">$1,523.00</div>
+            <div class="text-[9px] text-slate-500 mb-1">vs $7,020 full goal</div>
+            <span class="text-blue-400 font-bold text-[10px]">(21.7% achieved)</span>
+            <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mt-1">
+      <span class="text-white text-[9px] font-bold px-1.5 shrink-0">21.7%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:21.7%"></div>
+      </div>
+    </div>
+            <div class="text-[10px] text-slate-500 mt-1">Orders: 9 / MTD AOV: $169.22</div>
+          </div>
+          <div class="text-xs">
+            <div class="text-slate-500">vs to-date $1,190: <span class="text-[10px]"><span class="text-neon-green">&#9650; +$333.00 (+28.0%)</span></span></div>
+            <div class="text-slate-500 mt-1">Run Rate (Projected): <span class="font-bold">$7,913.00</span> vs $7,020 <span class="font-bold text-neon-green">(+12.7%)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-slate-700/50 border-l-4 border-l-slate-400 rounded-xl p-4">
+      <div class="grid gap-4" style="grid-template-columns: 110px auto 1fr">
+        <div class="flex flex-col justify-center">
+          <div class="text-slate-400 font-bold text-sm uppercase tracking-wide">Forum</div>
+          <span class="text-[9px] bg-slate-800 text-slate-400 rounded px-1.5 py-0.5 mt-1 inline-block uppercase tracking-widest w-fit">Daily</span>
+        </div>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-1 text-xs items-center">
+          <div><span class="text-slate-500">Sales</span> <span class="text-white font-bold">$0</span> <span class="text-[10px]"><span class="text-neon-red">&#9660; -$10.00 (-100.0%)</span></span></div>
+          <div><span class="text-slate-500">Orders</span> <span class="text-white font-bold">0</span></div>
+          <div><span class="text-slate-500">AOV</span> <span class="text-white font-bold">&mdash;</span></div>
+          <div><span class="text-slate-500">Sessions</span> <span class="text-white font-bold">29</span></div>
+          <div><span class="text-slate-500">Conv</span> <span class="text-white font-bold">0.00%</span></div>
+          <div><span class="text-slate-500">UPT</span> <span class="text-white font-bold">N/A</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <div class="text-white font-bold text-sm">$650.92</div>
+            <div class="text-[9px] text-slate-500 mb-1">vs $300 full goal</div>
+            <span class="text-orange-400 font-bold text-[10px]">(217.0% achieved)</span>
+            <div class="w-full bg-orange-500 rounded-full flex items-center p-0.5 mt-1">
+      <span class="text-white text-[9px] font-bold px-1.5 shrink-0">217.0%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:100.0%"></div>
+      </div>
+    </div>
+            <div class="text-[10px] text-slate-500 mt-1">Orders: 4 / MTD AOV: $162.73</div>
+          </div>
+          <div class="text-xs">
+            <div class="text-slate-500">vs to-date $170: <span class="text-[10px]"><span class="text-neon-green">&#9650; +$480.92 (+282.9%)</span></span></div>
+            <div class="text-slate-500 mt-1">Run Rate (Projected): <span class="font-bold">$900.92</span> vs $300 <span class="font-bold text-neon-green">(+200.3%)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-slate-700/50 border-l-4 border-l-orange-400 rounded-xl p-4">
+      <div class="grid gap-4" style="grid-template-columns: 110px auto 1fr">
+        <div class="flex flex-col justify-center">
+          <div class="text-orange-400 font-bold text-sm uppercase tracking-wide">Fulton &amp; Roark</div>
+          <span class="text-[9px] bg-slate-800 text-slate-400 rounded px-1.5 py-0.5 mt-1 inline-block uppercase tracking-widest w-fit">Daily</span>
+        </div>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-1 text-xs items-center">
+          <div><span class="text-slate-500">Sales</span> <span class="text-white font-bold">$171</span> <span class="text-[10px]"><span class="text-neon-red">&#9660; -$62.00 (-26.6%)</span></span></div>
+          <div><span class="text-slate-500">Orders</span> <span class="text-white font-bold">3</span></div>
+          <div><span class="text-slate-500">AOV</span> <span class="text-white font-bold">$90.33</span></div>
+          <div><span class="text-slate-500">Sessions</span> <span class="text-white font-bold">194</span></div>
+          <div><span class="text-slate-500">Conv</span> <span class="text-white font-bold">1.55%</span></div>
+          <div><span class="text-slate-500">UPT</span> <span class="text-white font-bold">1.33</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <div class="text-white font-bold text-sm">$4,090.00</div>
+            <div class="text-[9px] text-slate-500 mb-1">vs $6,990 full goal</div>
+            <span class="text-blue-400 font-bold text-[10px]">(58.5% achieved)</span>
+            <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mt-1">
+      <span class="text-white text-[9px] font-bold px-1.5 shrink-0">58.5%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:58.5%"></div>
+      </div>
+    </div>
+            <div class="text-[10px] text-slate-500 mt-1">Orders: 35 / MTD AOV: $116.86</div>
+          </div>
+          <div class="text-xs">
+            <div class="text-slate-500">vs to-date $3,961: <span class="text-[10px]"><span class="text-neon-green">&#9650; +$129.00 (+3.3%)</span></span></div>
+            <div class="text-slate-500 mt-1">Run Rate (Projected): <span class="font-bold">$7,585.00</span> vs $6,990 <span class="font-bold text-neon-green">(+8.5%)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-slate-700/50 border-l-4 border-l-sky-400 rounded-xl p-4">
+      <div class="grid gap-4" style="grid-template-columns: 110px auto 1fr">
+        <div class="flex flex-col justify-center">
+          <div class="text-sky-400 font-bold text-sm uppercase tracking-wide">Jack Henry</div>
+          <span class="text-[9px] bg-slate-800 text-slate-400 rounded px-1.5 py-0.5 mt-1 inline-block uppercase tracking-widest w-fit">Daily</span>
+        </div>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-1 text-xs items-center">
+          <div><span class="text-slate-500">Sales</span> <span class="text-white font-bold">$124</span> <span class="text-[10px]"><span class="text-neon-green">&#9650; +$23.75 (+23.8%)</span></span></div>
+          <div><span class="text-slate-500">Orders</span> <span class="text-white font-bold">1</span></div>
+          <div><span class="text-slate-500">AOV</span> <span class="text-white font-bold">$123.75</span></div>
+          <div><span class="text-slate-500">Sessions</span> <span class="text-white font-bold">221</span></div>
+          <div><span class="text-slate-500">Conv</span> <span class="text-white font-bold">0.45%</span></div>
+          <div><span class="text-slate-500">UPT</span> <span class="text-white font-bold">5.00</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <div class="text-white font-bold text-sm">$1,840.37</div>
+            <div class="text-[9px] text-slate-500 mb-1">vs $3,000 full goal</div>
+            <span class="text-blue-400 font-bold text-[10px]">(61.3% achieved)</span>
+            <div class="w-full bg-blue-500 rounded-full flex items-center p-0.5 mt-1">
+      <span class="text-white text-[9px] font-bold px-1.5 shrink-0">61.3%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:61.3%"></div>
+      </div>
+    </div>
+            <div class="text-[10px] text-slate-500 mt-1">Orders: 20 / MTD AOV: $92.02</div>
+          </div>
+          <div class="text-xs">
+            <div class="text-slate-500">vs to-date $1,700: <span class="text-[10px]"><span class="text-neon-green">&#9650; +$140.37 (+8.3%)</span></span></div>
+            <div class="text-slate-500 mt-1">Run Rate (Projected): <span class="font-bold">$3,440.37</span> vs $3,000 <span class="font-bold text-neon-green">(+14.7%)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900 border border-slate-700/50 border-l-4 border-l-pink-400 rounded-xl p-4">
+      <div class="grid gap-4" style="grid-template-columns: 110px auto 1fr">
+        <div class="flex flex-col justify-center">
+          <div class="text-pink-400 font-bold text-sm uppercase tracking-wide">T5MRKT</div>
+          <span class="text-[9px] bg-slate-800 text-slate-400 rounded px-1.5 py-0.5 mt-1 inline-block uppercase tracking-widest w-fit">Daily</span>
+        </div>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-1 text-xs items-center">
+          <div><span class="text-slate-500">Sales</span> <span class="text-white font-bold">$0</span> <span class="text-[10px]"><span class="text-neon-red">&#9660; -$10.00 (-100.0%)</span></span></div>
+          <div><span class="text-slate-500">Orders</span> <span class="text-white font-bold">0</span></div>
+          <div><span class="text-slate-500">AOV</span> <span class="text-white font-bold">&mdash;</span></div>
+          <div><span class="text-slate-500">Sessions</span> <span class="text-white font-bold">19</span></div>
+          <div><span class="text-slate-500">Conv</span> <span class="text-white font-bold">0.00%</span></div>
+          <div><span class="text-slate-500">UPT</span> <span class="text-white font-bold">N/A</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <div class="text-white font-bold text-sm">$390.00</div>
+            <div class="text-[9px] text-slate-500 mb-1">vs $300 full goal</div>
+            <span class="text-orange-400 font-bold text-[10px]">(130.0% achieved)</span>
+            <div class="w-full bg-orange-500 rounded-full flex items-center p-0.5 mt-1">
+      <span class="text-white text-[9px] font-bold px-1.5 shrink-0">130.0%</span>
+      <div class="flex-1 bg-black/25 rounded-full h-2 mr-1 overflow-hidden">
+        <div class="bg-white h-full rounded-full" style="width:100.0%"></div>
+      </div>
+    </div>
+            <div class="text-[10px] text-slate-500 mt-1">Orders: 1 / MTD AOV: $390.00</div>
+          </div>
+          <div class="text-xs">
+            <div class="text-slate-500">vs to-date $170: <span class="text-[10px]"><span class="text-neon-green">&#9650; +$220.00 (+129.4%)</span></span></div>
+            <div class="text-slate-500 mt-1">Run Rate (Projected): <span class="font-bold">$660.00</span> vs $300 <span class="font-bold text-neon-green">(+120.0%)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<div class="animate-fade-in">
+  <div class="text-center text-[9px] text-slate-700 tracking-widest uppercase py-2">
+    Report Generated: September 18, 2026 &nbsp;&middot;&nbsp; Actuals: September 17, 2026 &nbsp;&middot;&nbsp; Supra Distribution Internal Use Only &nbsp;&middot;&nbsp; Generated via automated KPI dashboard pipeline
+  </div>
 </div>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const els = document.querySelectorAll('.animate-fade-in');
-    els.forEach((el, i) => setTimeout(() => el.classList.add('visible'), i*80));
-  });
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.animate-fade-in');
+    elements.forEach((el, i) => {
+        setTimeout(() => {
+            void el.offsetWidth;
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, i * 80);
+    });
+});
 </script>
 </body>
 </html>
